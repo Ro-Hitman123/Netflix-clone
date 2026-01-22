@@ -24,10 +24,13 @@ body {
     min-height: 80vh;
     height: auto;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     z-index: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.75);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
 }
 
 nav {
@@ -101,9 +104,9 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
+    /* height: 80%; */
+    /* position: absolute; */
+    /* bottom: 0; */
     width: 100%;
 
 }
@@ -231,7 +234,7 @@ input:focus{
     outline-offset: 1px;
 }
 
-@media screen and (max-width: 800px) and (max-width: 1300px) {
+@media screen and (min-width: 800px) and (max-width: 1300px) {
     nav {
         max-width: 90vw;
         flex-wrap: wrap; /* allow wrapping if needed */
@@ -349,7 +352,8 @@ input:focus{
 
     .text2{
         position: relative;
-        top: -80px;
+        margin-bottom: 20px;
+        /* top: -80px; */
     }
 
     .text2 h1 {
@@ -375,7 +379,8 @@ input:focus{
 
     .inputs{
         position: relative;
-        top: -80px;
+        margin-bottom: 20px;
+        /* top: -80px; */
     }
 
     .inputs1 {
