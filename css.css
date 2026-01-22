@@ -15,7 +15,7 @@ body {
     background-image: url(https://image2url.com/r2/default/images/1768928047212-6ae13947-bfd8-4104-a89c-36476173958c.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: max(1300px, 100vw);
+    background-size: max(1300px,100vw);
     height: 80vh;
     position: relative;
 }
@@ -141,7 +141,7 @@ img {
     position: relative;
     display: flex;
     align-items: center;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .inputs input::placeholder {
@@ -200,6 +200,7 @@ label {
     to{
         transform: translateY(-30%);
         font-size: 12px;
+        text-align: center;
     }
 }
 
@@ -227,4 +228,146 @@ input:placeholder-shown:not(:focus) + label{
 input:focus{
     outline: 1px solid white;
     outline-offset: 1px;
+}
+
+@media screen and (max-width: 800px) and (max-width: 1300px) {
+    nav {
+        max-width: 90vw;
+        flex-wrap: wrap; /* allow wrapping if needed */
+        gap: 10px;
+        justify-content: center;
+    }
+
+    img {
+        width: 120px;
+        margin-top: 10px;
+    }
+
+    .button button:first-child {
+        width: 8vw;
+        height: 4vh;
+        font-size: 14px;
+    }
+
+    .button button:nth-child(2) {
+        width: 6vw;
+        height: 4vh;
+        font-size: 14px;
+    }
+
+    .container {
+        background-size: cover;
+        background-position: center top;
+        height: auto;
+        min-height: 80vh;
+    }
+
+    .text1 {
+        width: 90%;
+        bottom: 5%;
+        height: auto;
+        padding: 0 5%;
+    }
+
+    .text2 {
+        width: 90%;
+        gap: 8px;
+    }
+
+    .text2 h1 {
+        font-size: 36px;
+    }
+
+    .text2 p {
+        font-size: 16px;
+    }
+
+    .inputs p {
+        font-size: 14px;
+    }
+
+    .inputs input {
+        width: 280px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .inputs button {
+        width: 140px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .inputs1 {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    label {
+        font-size: 10px;
+        padding-left: 8px;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 800px) {
+    nav {
+        max-width: 95vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        height: auto;
+    }
+
+    img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .button button:first-child,
+    .button button:nth-child(2) {
+        width: 40vw;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .text1 {
+        width: 95%;
+        bottom: 10%;
+        padding: 0 5%;
+    }
+
+    .text2 h1 {
+        font-size: 28px;
+    }
+
+    .text2 p,
+    .inputs p {
+        font-size: 14px;
+    }
+
+    .inputs input {
+        width: 220px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .inputs button {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .inputs1 {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+
+    label {
+        font-size: 10px;
+        padding-left: 8px;
+    }
 }
