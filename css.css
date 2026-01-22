@@ -352,7 +352,8 @@ input:focus{
     }
 
     .text2 h1 {
-        font-size: 32px;
+        display: flex;
+        text-align: center;
     }
 
     .text2 p,
