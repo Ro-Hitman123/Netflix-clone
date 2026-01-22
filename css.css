@@ -11,12 +11,17 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+input, textarea, select {
+  font-size: 16px;
+}
+
+
 .container {
     background-image: url(https://image2url.com/r2/default/images/1768928047212-6ae13947-bfd8-4104-a89c-36476173958c.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: max(1300px,100vw);
-    height: 80vh;
+    min-height: 80%;
     position: relative;
 }
 
