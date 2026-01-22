@@ -310,26 +310,34 @@ input:focus{
     }
 }
 
-/* Mobile phones */
 @media screen and (max-width: 800px) {
     nav {
         max-width: 95vw;
-        flex-direction: column;
         align-items: center;
-        gap: 10px;
+        display: flex;
+        justify-content: space-between;
         height: auto;
     }
 
     img {
-        width: 100px;
-        margin-top: 10px;
+        width: 120px;
+        margin: 30px 0px 0px 20px;
     }
 
     .button button:first-child,
     .button button:nth-child(2) {
-        width: 40vw;
-        height: 35px;
-        font-size: 14px;
+        width: 15vw;
+        height: 25px;
+        font-size: 10px;
+        margin-top: 30px;
+    }
+
+    .buttonL{
+        gap: 2px;
+    }
+
+    .buttonL i{
+        font-size: 10px;
     }
 
     .text1 {
@@ -338,13 +346,18 @@ input:focus{
         padding: 0 5%;
     }
 
+    .text2{
+        position: relative;
+        top: -135px;
+    }
+
     .text2 h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .text2 p,
     .inputs p {
-        font-size: 14px;
+        font-size: large;
     }
 
     .inputs input {
@@ -353,17 +366,31 @@ input:focus{
         font-size: 12px;
     }
 
-    .inputs button {
-        width: 100%;
-        height: 40px;
-        font-size: 16px;
+    .inputs p{
+        line-height: normal;
+        margin-bottom: 20px;
+    }
+
+    .inputs{
+        position: relative;
+        top: -130px;
     }
 
     .inputs1 {
-        width: 100%;
+        display: flex;
+        justify-content: center;
         flex-direction: column;
         gap: 10px;
-        align-items: stretch;
+    }
+
+    .inputs1 button{
+        width: 150px;
+        height: 50px;
+    }
+
+    .input-container input{
+        width: 250px;
+        height: 50px;
     }
 
     label {
