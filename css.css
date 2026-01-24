@@ -315,6 +315,11 @@ input:focus{
 }
 
 @media screen and (max-width: 800px) {
+
+    .container{
+        min-height: 80svh;
+    }
+
     nav {
         max-width: 95vw;
         align-items: center;
