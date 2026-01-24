@@ -318,7 +318,6 @@ input:focus{
 
     .container{
         min-height: 80%;
-        background-attachment: fixed;
     }
 
     nav {
