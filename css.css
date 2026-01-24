@@ -7,6 +7,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+    min-height: 100%
     background-color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -16,14 +17,14 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: max(1300px,100vw);
-    min-height: 80dvh;
+    min-height: 80%;
     position: relative;
 }
 
 .box {
-    min-height: 80dvh;
+    min-height: 80%;
     width: 100%;
-    position: relative; 
+    position: absolute; 
     z-index: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.75);
@@ -90,7 +91,7 @@ img {
 }
 
 .text {
-    height: 100%;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,7 +108,7 @@ img {
     position: absolute;
     bottom: 0;
     min-width: 100dvw;
-
+    overflow-y: auto;
 }
 
 .text2 {
