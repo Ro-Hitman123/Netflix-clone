@@ -317,7 +317,8 @@ input:focus{
 @media screen and (max-width: 800px) {
 
     .container{
-        min-height: 80svh;
+        min-height: 80%;
+        position: relative;
     }
 
     nav {
