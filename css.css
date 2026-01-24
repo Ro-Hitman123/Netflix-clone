@@ -16,13 +16,13 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: max(1300px,100vw);
-    min-height: 100svh;
+    min-height: 80svh;
     height: auto;
     position: relative;
 }
 
 .box {
-    min-height: 80dvh;
+    min-height: 80%;
     height: auto;
     width: 100%;
     position: absolute; 
@@ -316,6 +316,16 @@ input:focus{
 }
 
 @media screen and (max-width: 800px) {
+
+    html, body {
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    .container{
+        min-height: 80svh;
+    }
+
     nav {
         max-width: 95vw;
         align-items: center;
