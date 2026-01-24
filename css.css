@@ -317,7 +317,7 @@ input:focus{
 @media screen and (max-width: 800px) {
 
     .container{
-        min-height: 80svh;
+        min-height: 80%;
         background-attachment: fixed;
     }
 
@@ -354,7 +354,7 @@ input:focus{
         position: relative;
         width: 95%;
         bottom: auto;
-        min-height: 80svh;
+        min-height: 80%;
         overflow-y: auto;
     }
 
