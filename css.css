@@ -317,8 +317,7 @@ input:focus{
 @media screen and (max-width: 800px) {
 
     .container{
-        min-height: 80%;
-        position: relative;
+        min-height: 80svh;
     }
 
     nav {
@@ -353,7 +352,9 @@ input:focus{
     .text1 {
         position: relative;
         width: 95%;
-        bottom: 10%;
+        bottom: auto;
+        min-height: 80svh;
+        overflow-y: auto;
     }
 
     .text2{
