@@ -16,7 +16,7 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: max(1300px,100vw);
-    min-height: 80%;
+    min-height: 80dvh;
     position: relative;
 }
 
@@ -351,20 +351,19 @@ input:focus{
     }
 
     .text2{
-        margin-top: 120px;
-        margin-bottom: 10px;
-    
+        margin-top: 100px;
+        margin-bottom: 20px;
+        width: 90dvw;
     }
 
     .text2 h1 {
-        font-size: 32px;
+        font-size: 28px;
         display: flex;
-        text-align: center;
     }
 
     .text2 p,
     .inputs p {
-        font-size: large;
+        font-size: 15px;
     }
 
     .inputs input {
@@ -378,10 +377,19 @@ input:focus{
         margin-bottom: 20px;
     }
 
+    .inputsp1{
+        max-width: 75dvw;
+    }
+
     .inputs{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .button0{
+        display: flex;
+        justify-content: center;
     }
 
     .inputs1 {
