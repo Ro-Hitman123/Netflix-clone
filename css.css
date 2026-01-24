@@ -17,6 +17,7 @@ body {
     background-repeat: no-repeat;
     background-size: max(1300px,100vw);
     height: 80%;
+    height: auto;
     position: relative;
 }
 
