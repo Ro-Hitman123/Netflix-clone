@@ -52,19 +52,12 @@ img {
     z-index: 1;
 }
 
-.buttonL {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    gap: 7px;
-}
-
 .button i {
     font-size: 15px;
     position: absolute;
 }
 
-.button button:first-child {
+.button select {
     background-color: transparent;
     color: white;
     border: 1px solid gray;
@@ -73,9 +66,14 @@ img {
     width: 6vw;
     cursor: pointer;
     margin-top: 10px;
+    text-align: center;
 }
 
-.button button:nth-child(2) {
+.button select option{
+    background-color: gray;
+    color: white;
+}
+.button button {
     background-color: rgb(209, 7, 7);
     color: white;
     height: 3vh;
@@ -90,7 +88,7 @@ img {
 }
 
 .text {
-    min-height: 100dvh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,10 +101,10 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 60dvh;
+    height: 100vh;
     position: absolute;
     bottom: 0;
-    min-width: 100dvw;
+    width: 60vw;
     overflow-y: auto;
 }
 
@@ -235,7 +233,7 @@ input:focus {
     outline-offset: 1px;
 }
 
-@media screen and (min-width: 800px) and (max-width: 1300px) {
+/* @media screen and (min-width: 800px) and (max-width: 1300px) {
     nav {
         max-width: 90vw;
         flex-wrap: wrap;
@@ -313,7 +311,7 @@ input:focus {
         font-size: 10px;
         padding-left: 8px;
     }
-}
+} */
 
 @media screen and (max-width: 800px) {
     html, body {
@@ -348,7 +346,6 @@ input:focus {
         margin: 30px 0px 0px 20px;
     }
 
-    .button button:first-child,
     .button button:nth-child(2) {
         width: 15vw;
         height: 25px;
@@ -356,12 +353,11 @@ input:focus {
         margin-top: 30px;
     }
 
-    .buttonL {
-        gap: 2px;
-    }
-
-    .buttonL i {
+    .button select{
+        height: 25px;
+        width: 20vw;
         font-size: 10px;
+        margin-top: 30px;
     }
 
     .text1 {
