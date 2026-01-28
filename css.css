@@ -60,7 +60,7 @@ img {
 .button select {
     background-color: transparent;
     color: white;
-    border: 1px solid gray;
+    border: 1px solid rgb(92, 92, 92);
     border-radius: 3px;
     height: 3vh;
     width: 6vw;
@@ -69,10 +69,11 @@ img {
     text-align: center;
 }
 
-.button select option{
+.button select option {
     background-color: gray;
     color: white;
 }
+
 .button button {
     background-color: rgb(209, 7, 7);
     color: white;
@@ -233,6 +234,90 @@ input:focus {
     outline-offset: 1px;
 }
 
+.trending {
+    background: black;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.trending h2 {
+    color: white;
+    font-size: 24px;
+    margin-left: 60px;
+    position: relative;
+    right: 470px;
+    padding-top: 20px;
+}
+
+/* wrapper */
+.row-wrapper {
+    max-width: 65%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* horizontal scroll row */
+.row {
+    display: flex;
+    gap: 18px;
+    overflow-x: scroll;
+    padding: 20px 60px;
+    scroll-behavior: smooth;
+}
+
+/* hide scrollbar */
+.row::-webkit-scrollbar {
+    display: none;
+}
+
+.row {
+    scrollbar-width: none;
+}
+
+/* cards */
+.row img {
+    width: 220px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 5;
+    display: none;
+}
+
+.nav.left {
+    left: 0;
+}
+
+.nav.right {
+    right: 0;
+}
+
+/* show arrows on hover */
+.row-wrapper:hover .nav {
+    display: block;
+}
+
+
 /* @media screen and (min-width: 800px) and (max-width: 1300px) {
     nav {
         max-width: 90vw;
@@ -314,7 +399,9 @@ input:focus {
 } */
 
 @media screen and (max-width: 800px) {
-    html, body {
+
+    html,
+    body {
         overflow-x: hidden;
     }
 
@@ -353,7 +440,7 @@ input:focus {
         margin-top: 30px;
     }
 
-    .button select{
+    .button select {
         height: 25px;
         width: 20vw;
         font-size: 10px;
@@ -361,7 +448,6 @@ input:focus {
     }
 
     .text1 {
-        position: relative;
         width: 95%;
         bottom: auto;
         min-height: 80%;
@@ -386,7 +472,7 @@ input:focus {
     .inputs input {
         width: 220px;
         height: 35px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .inputs p {
@@ -429,6 +515,76 @@ input:focus {
 
     label {
         font-size: 10px;
-        padding-left: 8px;
+        padding-left: 9px;
     }
+
+    .trending h2 {
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+        margin-left: 60px;
+        position: relative;
+        padding-top: 10px;
+        left: -110px;
+    }
+
+    .row-wrapper {
+        max-width: 100%;
+        position: relative;
+    }
+
+    .row {
+        display: flex;
+        gap: 18px;
+        overflow-x: scroll;
+        padding: 0px 30px;
+        scroll-behavior: smooth;
+        height: 255px;
+    }
+
+    .row::-webkit-scrollbar {
+        display: none;
+    }
+
+    .row {
+        scrollbar-width: none;
+    }
+
+    .row img {
+        width: 220px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .row img:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    .nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 17%;
+        width: 30px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 5;
+        display: none;
+    }
+
+    .nav.left {
+        left: 0;
+    }
+
+    .nav.right {
+        right: 0;
+    }
+
+    .row-wrapper:hover .nav {
+    display: block;
+}
+
 }

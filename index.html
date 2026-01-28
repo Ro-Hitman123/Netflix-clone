@@ -55,5 +55,37 @@
             </div>
         </div>
     </div>
+    <section class="trending">
+    <h2>Trending Now</h2>
+
+    <div class="row-wrapper">
+        <button class="nav left">&#10094;</button>
+        <div class="row" id="row">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVwkctHoZyXX6x_Wh9ZoVju5V4_FsQpH0O4FmVxA5gQak9__L6X8OV0HBUaKnNLEe1VsXAOZDZmReBW8xLKNTBlXHs4h-llwpiBovnFEX_9QTQYqjZ0Hai2pZSdzgoYilvYw.jpg?r=e8a">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABdMV-HZH6NUQ4JzFQwMEwjBSPGMpK6LyHgHQA--Ltd61GC5AD4uc7CTp_c7knmrBLo5he7BkKB1jK7q5vG4jZWaZRtHjWxxUTnczNbIDnZabra5ociBeiC-bcNRC1BMyf8Zl.jpg?r=f34">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRWXhctuCzyVo7U6dqC9kBIjkORNU3Q_QMTMnDNcdDLzDT8fU_3XIrg8YJF3_EkcIiu021Hgz5EZH9p8ktdeMhpWbz1aA9kt0JyPHjSxfyGpW0wodA_YI8zV0ERORffig1YS.jpg?r=29e">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABY2_EC-g09WUfVf1SHef_vI5NIe0eBz4U-6zDMhmzjs0cA9jTeIeDqT6tYJ5Rt-hxRpGrlE537JJSyT6LTdh5hknoruv_ydBRV4.jpg?r=0e8">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXrjUCgGHsbjAA619W2iDa77-ByFKt3ODuNlZCm_iaJHI-2wIKpo64ZgPm_LHvksS0DCY-MlwmB7M59oXTgK5C1N408_WezYMhhDzOd1S5Vr_ZMfNwKXWIeZXdOhZ9jLFVk9.jpg?r=dff">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZsVE1PjBMN3aNUN8bNcXfa2aA1kx0mbw-KrzCrF9UtE5_ozUCiQ-OH57wPlsOjtXuPavBYP-E-D-v5t7fz4Wai8Wv4jmnpt6tc.jpg?r=4a4">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABb8-zieNHzR-0TSVZM8BoWbx-Zp1bE43rsozMOwmADdARfaLDGMvmImWS32K7YiKj7XDWycD21KthZcnViQlYI6IGJeo-Sc6q8I.jpg?r=32c">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXUfhSutgq4l3MWGFARiUhZMOijiZHhK817p29_IrO58Pn1Lc6TK5s_H2nGVQAwR_csa3ePbhC2zMqEUqLUKmj7XWh2KTHMjoCL3al9i_mhJXx-wr5_Xzbw7fVFLMma4jant.jpg?r=be5">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXsERu0jxHBUV4fl6lvzuekLxVDnkJWqKRy8Qqa2I7LS3CcUZelrN-I14Tk3MSfk2ny6w2k1VHDGPxH7qJ-2NpWGbf6zguEjxf8.jpg?r=e5d">
+            <img src="https://occ-0-4873-3646.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABZSSVYEoJD4lg5IeUAwslLyfackP3Q-nXquJo4KHusxjXvK8gCptzbFVls7dLipNQDFAByohwhmIgM13V1dFQ6MfVHKAIyl0_ac.jpg?r=1f1">
+        </div>
+        <button class="nav right">&#10095;</button>
+    </div>
+</section>
 </body>
+<script>
+const row = document.getElementById("row");
+const scrollAmount = 400;
+
+document.querySelector(".nav.left").onclick = () => {
+    row.scrollLeft -= scrollAmount;
+};
+
+document.querySelector(".nav.right").onclick = () => {
+    row.scrollLeft += scrollAmount;
+};
+</script>
 </html>
