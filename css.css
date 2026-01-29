@@ -8,7 +8,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .container {
@@ -237,7 +237,7 @@ input:focus {
 .trending {
     background: black;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -247,13 +247,13 @@ input:focus {
     font-size: 24px;
     margin-left: 60px;
     position: relative;
-    right: 470px;
+    right: 390px;
     padding-top: 20px;
 }
 
 /* wrapper */
 .row-wrapper {
-    max-width: 65%;
+    width: 60%;
     position: relative;
     display: flex;
     align-items: center;
@@ -264,7 +264,7 @@ input:focus {
     display: flex;
     gap: 18px;
     overflow-x: scroll;
-    padding: 20px 60px;
+    padding: 10px 30px;
     scroll-behavior: smooth;
 }
 
@@ -279,8 +279,8 @@ input:focus {
 
 /* cards */
 .row img {
-    width: 220px;
-    border-radius: 10px;
+    width: 170px;
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
@@ -293,15 +293,17 @@ input:focus {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    height: 100%;
-    width: 30px;
-    background: rgba(0, 0, 0, 0.5);
+    height: 80px;
+    border-radius: 10px;
+    width: 25px;
+    background: rgb(72, 72, 72);
     color: white;
     border: none;
     font-size: 40px;
     cursor: pointer;
     z-index: 5;
     display: none;
+    display: block;
 }
 
 .nav.left {
@@ -312,11 +314,185 @@ input:focus {
     right: 0;
 }
 
-/* show arrows on hover */
-.row-wrapper:hover .nav {
-    display: block;
+.more{
+    height: 250px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0px 0px 0px;
 }
 
+.more h2{
+    position: relative;
+    left: -310px;
+}
+
+.reason{
+    height: 220px;
+    width: 59vw;
+    background-color: black;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.reason div{
+    height: 200px;
+    width: 180px;
+    background-color: linear-gradient(135deg, #e21851 0%, #8f118f 100%);
+    border:  solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 35px;
+}
+
+.reason div span:nth-child(1){
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.reason div span:nth-child(2){
+    font-size: 12px;
+}
+
+.reason div span:nth-child(3){
+    position: relative;
+    bottom: -50px;
+    left: 120px;
+
+}
+
+.asked{
+    height: 500px;
+    width: 100%;
+    background-color: black;
+}
+
+.question{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.question h2{
+    color: white;
+    position: relative;
+    left: -268px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+
+.question li{
+    height: auto;
+    width: 878px;
+    background-color: rgb(69, 63, 63);
+    position: relative;
+    left: 25px;
+}
+
+.question li h3{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question li h3 button{
+    height: 60px;
+    width: 878px;
+    background-color: rgb(69, 63, 63);
+    position: relative;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+
+/* 1. Fix the syntax (no quotes, use rotate instead of rotateX) */
+@keyframes rotates {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+/* 2. Create a class that we will toggle with JavaScript */
+.is-open svg {
+    animation: rotates 0.2s ease-in-out forwards;
+}
+
+/* 3. Ensure the SVG spins around its center */
+.question li h3 button svg {
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.question li h3 button:hover{
+    background-color: rgb(104, 92, 92);
+}
+
+.answers {
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
+    background-color: rgb(69, 63, 63);
+    color: white;
+}
+
+.answers p {
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    border-top: 1px solid black;
+}
+
+/* Update this to use .active on the LI */
+.question li.active h3 button svg {
+    transform: rotate(45deg);
+}
+
+/* Ensure the answer shows when the parent li is active */
+.question li.active .answers {
+    max-height: 1000px; /* Adjust based on content length */
+    padding-bottom: 20px;
+    visibility: visible;
+}
+
+/* Fix: Remove fixed height from button h3 container to allow expansion */
+.question li h3 {
+    height: auto; 
+    background-color: transparent; /* Remove the red background you had */
+}
+
+.format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    color: white;
+    position: relative;
+}
 
 /* @media screen and (min-width: 800px) and (max-width: 1300px) {
     nav {
